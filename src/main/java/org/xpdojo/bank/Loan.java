@@ -5,19 +5,24 @@ import java.util.Date;
 public class Loan {
 
     private Double balance;
-    private final Date date;
+    private final Date loanCreated;
+    private final Date loanFinised;
 
-    public Loan(Double balance, Date date){
+    public Loan(Double balance, Date loanCreated, Date loanFinised){
         this.balance = balance;
-        this.date = date;
+        this.loanCreated = loanCreated;
+        this.loanFinised = loanFinised;
     }
 
     public Double getBalance(){
         return balance;
     }
 
-    public Date getDate(){
-        return this.date;
+    public Date getLoanCreated(){
+        return this.loanCreated;
+    }
+    public Date getLoanFinised(){
+        return this.loanFinised;
     }
 
     public void payRate(Double rate){
