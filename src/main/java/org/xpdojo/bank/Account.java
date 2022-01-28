@@ -18,4 +18,8 @@ public class Account {
     public Double balance() {
         return balance;
     }
+
+    public static Account emptyAccount(){
+        return new Account();
+    }
 }
