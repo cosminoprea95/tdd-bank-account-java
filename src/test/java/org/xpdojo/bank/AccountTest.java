@@ -8,9 +8,9 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class AccountTest {
 
     @Test
-    public void balanceCheck(){
+    public void balanceCheckAfterDeposit(){
         Account account = new Account();
-        account.deposit(10);
-        assertThat(account.balance()).isEqualTo(0.0);
+        account.deposit(10.0);
+        assertThat(account.balance()).isEqualTo(10.0);
     }
 }
