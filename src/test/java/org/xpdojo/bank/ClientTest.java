@@ -34,6 +34,14 @@ public class ClientTest {
         client.addLoan(loan);
         client.getLoans().get(0).payRate(1000.0);
         assertThat(client.getLoans().get(0).getBalance()).isEqualTo(-9000.0);
+    }
 
+    @Test
+    public void checkLoanBalanceIsNegative(){
+        Client client = new Client();
+        Date date = new Date();
+        Loan loan = new Loan(-10000.0, date);
+        client.addLoan(loan);
+        assertThat(client.getLoans().get(0).getBalance()).isLessThan(0.0);
     }
 }
