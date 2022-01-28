@@ -13,4 +13,11 @@ public class AccountTest {
         account.deposit(10.0);
         assertThat(account.balance()).isEqualTo(10.0);
     }
+
+    @Test
+    public void checkBalanceAfterRetrievingAccount(){
+        Account account = new Account(100.0);
+        account.deposit(10.0);
+        assertThat(account.balance()).isEqualTo(110.0);
+    }
 }
